@@ -1,8 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  build: {
-    analyze: true,
-  },
   runtimeConfig: {
     discordClientId: process.env.DISCORD_CLIENT_ID,
     discordClientSecret: process.env.DISCORD_CLIENT_SECRET,
