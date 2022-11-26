@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const { $client } = useNuxtApp()
-const noInput = await $client.hello.query()
-const yesInput = await $client.hello.query({ text: 'John' })
+const { $trpc } = useNuxtApp()
+const noInput = await $trpc.exampleRouter.hello.query()
+const yesInput = await $trpc.exampleRouter.hello.query({ text: 'John' })
 
 </script>
 

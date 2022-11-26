@@ -1,8 +1,10 @@
 import { httpBatchLink, createTRPCProxyClient } from '@trpc/client'
 import type { AppRouter } from '@/server/trpc/routers'
+import SuperJSON from 'superjson'
 
 export default defineNuxtPlugin(() => {
   const client = createTRPCProxyClient<AppRouter>({
+    transformer: SuperJSON,
     links: [
       httpBatchLink({
         /**
@@ -16,7 +18,7 @@ export default defineNuxtPlugin(() => {
 
   return {
     provide: {
-      client,
+      trpc: client,
     },
   }
 })
