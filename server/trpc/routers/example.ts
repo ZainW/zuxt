@@ -13,4 +13,10 @@ export const exampleRouter = router({
         greeting: `hello ${input?.text ?? 'world'}`,
       }
     }),
+  getAll: publicProcedure
+    .query(({ ctx }) => {
+      const example = ctx.prisma.example.findMany()
+      return example
+    }
+  ),
 })

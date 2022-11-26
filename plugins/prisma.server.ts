@@ -1,9 +1,9 @@
-import client from "~~/lib/prisma";
+import {prisma} from "~~/lib/prisma";
 
 export default defineNuxtPlugin(() => {
   return {
     provide: {
-      prisma: client,
+      prisma,
     },
   };
 })
