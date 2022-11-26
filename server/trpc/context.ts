@@ -5,6 +5,7 @@ import type { H3Event } from 'h3'
 
 import {prisma} from '~~/lib/prisma'
 
+
 /**
  * Creates context for an incoming request
  * @link https://trpc.io/docs/context
@@ -13,15 +14,12 @@ export async function createContext (
   event: H3Event
 ) {
   const session = await getServerSession(event)
-  if (!session) {
-    return {
-      status: 'unauthenticated'
-    }
-  }
+  const status = session ? 'authenticated' : 'unauthenticated'
   // for API-response caching see https://trpc.io/docs/caching
   // console.log('cookies', parseCookies(event))
   
-  return { prisma, status: 'authenticated', session }
+
+  return { session, status, prisma }
 }
 
 export type Context = inferAsyncReturnType<typeof createContext>
