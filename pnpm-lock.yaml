@@ -4,8 +4,8 @@ specifiers:
   '@next-auth/prisma-adapter': ^1.0.5
   '@prisma/client': ^4.6.1
   '@sidebase/nuxt-auth': ^0.2.0
-  '@trpc/client': ^10.2.0
-  '@trpc/server': ^10.2.0
+  '@trpc/client': ^10.3.0
+  '@trpc/server': ^10.3.0
   '@unocss/nuxt': ^0.46.5
   nuxt: 3.0.0
   prisma: ^4.6.1
@@ -18,10 +18,10 @@ specifiers:
 dependencies:
   '@next-auth/prisma-adapter': 1.0.5_@prisma+client@4.6.1
   '@prisma/client': 4.6.1_prisma@4.6.1
-  '@trpc/client': 10.2.0_@trpc+server@10.2.0
-  '@trpc/server': 10.2.0
+  '@trpc/client': 10.3.0_@trpc+server@10.3.0
+  '@trpc/server': 10.3.0
   superjson: 1.11.0
-  trpc-nuxt: 0.4.3_5dvn2bvhzjzvyfcqzgzjazwuyi
+  trpc-nuxt: 0.4.3_7lmzib6fvb2ak7xfxwf4mflj4u
   zod: 3.19.1
 
 devDependencies:
@@ -859,16 +859,16 @@ packages:
       - supports-color
     dev: true
 
-  /@trpc/client/10.2.0_@trpc+server@10.2.0:
-    resolution: {integrity: sha512-Mehf6euqMzAak+Umay1LKol9nC716yBjHNqrF6blWY/n2hwSICrLXQwveNaHK7qjKXJ86b4aDW39KR02WCQP4A==}
+  /@trpc/client/10.3.0_@trpc+server@10.3.0:
+    resolution: {integrity: sha512-plZ/uNGVZ0tsMwJKjVLUzT7B1kGxa+TpLxZ9i9OfxKUpPnMtz0MSg8Qx2oHqTqbGgcmmekyusmTfLyNzym2ZlA==}
     peerDependencies:
-      '@trpc/server': 10.2.0
+      '@trpc/server': 10.3.0
     dependencies:
-      '@trpc/server': 10.2.0
+      '@trpc/server': 10.3.0
     dev: false
 
-  /@trpc/server/10.2.0:
-    resolution: {integrity: sha512-WGOA2bk6JOnOywUu1gkAgwqnxZ5g+vNkL9EpCGLgKYwwMcjAwgNRgYzLPsDsR1XL48wmdYOzfWzJ0G575+g/jA==}
+  /@trpc/server/10.3.0:
+    resolution: {integrity: sha512-PdSSmO9vBeWKdVhr3WHUPAPscOLLY+M6G7CL1AqjNL1grTOiB0bN1bvb4/D9qAdgwWB8qZOLb7WeuAudyD4FpQ==}
     dev: false
 
   /@trysound/sax/0.2.0:
@@ -3550,7 +3550,7 @@ packages:
       scule: 1.0.0
       strip-literal: 1.0.0
       ufo: 1.0.0
-      ultrahtml: 1.0.1
+      ultrahtml: 1.0.3
       unctx: 2.1.0
       unenv: 1.0.0
       unhead: 1.0.4
@@ -4707,14 +4707,14 @@ packages:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
     dev: true
 
-  /trpc-nuxt/0.4.3_5dvn2bvhzjzvyfcqzgzjazwuyi:
+  /trpc-nuxt/0.4.3_7lmzib6fvb2ak7xfxwf4mflj4u:
     resolution: {integrity: sha512-rLP//Hu1wtSlRduHIgw8OiakdV3Z0CjQOzmzRaT1SSrmm4EDURMCNWXbMqRlwDtvYlXVsQGzjNReHSd4v4dvsQ==}
     peerDependencies:
       '@trpc/client': ^10.0.0
       '@trpc/server': ^10.0.0
     dependencies:
-      '@trpc/client': 10.2.0_@trpc+server@10.2.0
-      '@trpc/server': 10.2.0
+      '@trpc/client': 10.3.0_@trpc+server@10.3.0
+      '@trpc/server': 10.3.0
       h3: 1.0.1
       nanoid: 4.0.0
       ohash: 1.0.0
@@ -4753,8 +4753,8 @@ packages:
   /ufo/1.0.0:
     resolution: {integrity: sha512-DRty0ZBNlJ2R59y4mEupJRKLbkLQsc4qtxjpQv78AwEDuBkaUogMc2LkeqW3HddFlw6NwnXYfdThEZOiNgkmmQ==}
 
-  /ultrahtml/1.0.1:
-    resolution: {integrity: sha512-VDt8gmBR5DPrsfdLS4GQqncojcsLTKMW6iHKVN9l6TohU5bdn/OPv8AmV/0/PBR7Z3qBmMpJHqxRdQFaFA8B9g==}
+  /ultrahtml/1.0.3:
+    resolution: {integrity: sha512-QpTl78vv2o004UPD6b+Vjfoh2b33PV0LS6UHoI1u3wQ2xVRJAkW8Ip4QBiL6JTlMMtIWOXqli98WnsWx6IFFRg==}
     dev: true
 
   /unconfig/0.3.7:
