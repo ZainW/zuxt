@@ -20,7 +20,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.32.0",
     "@sidebase/nuxt-auth": "^0.2.0",
-    "@unocss/nuxt": "^0.46.5",
+    "@unocss/nuxt": "^0.47.1",
     "eslint": "^8.28.0",
     "nuxt": "3.0.0",
     "prisma": "^4.7.0",
