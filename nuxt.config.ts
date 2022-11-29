@@ -3,11 +3,11 @@ export default defineNuxtConfig({
   runtimeConfig: {
     discordClientId: process.env.DISCORD_CLIENT_ID,
     discordClientSecret: process.env.DISCORD_CLIENT_SECRET,
-    NUXT_SECRET: process.env.NUXT_SECRET
+    NUXT_SECRET: process.env.NUXT_SECRET,
   },
   modules: [
     '@unocss/nuxt',
-    '@sidebase/nuxt-auth'
+    '@sidebase/nuxt-auth',
   ],
   unocss: {
     uno: true,
@@ -15,5 +15,5 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
     typeCheck: true,
-  }
+  },
 })

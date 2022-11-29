@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { publicProcedure, router, privateProcedureWithAuth } from '../trpc'
+import { privateProcedureWithAuth, publicProcedure, router } from '../trpc'
 
 export const exampleRouter = router({
   hello: publicProcedure
@@ -23,15 +23,15 @@ export const exampleRouter = router({
     }
   }),
   getAll: publicProcedure
-    .query(({ctx}) => {
+    .query(({ ctx }) => {
       const examples = ctx.prisma.example.findMany()
       return examples
-    }
-  ),
+    },
+    ),
   getOne: publicProcedure.input(
     z.object({
       id: z.string(),
-    })
+    }),
   ).query(({ input, ctx }) => {
     const example = ctx.prisma.example.findUnique({
       where: {

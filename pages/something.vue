@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const { status, data, signIn, signOut } = await useSession({
   // Whether a session is required. If it is, a redirect to the signin page will happen if no active session exists
-  required: true
+  required: true,
 })
-status.value // Session status: `unauthenticated`, `loading`, `authenticated`
-data.value // Session data, e.g., expiration, user.email, ...
+// status.value // Session status: `unauthenticated`, `loading`, `authenticated`
+// data.value // Session data, e.g., expiration, user.email, ...
 // await signIn() // Sign in the user
 // await signOut() // Sign out the user
 </script>
@@ -12,10 +12,10 @@ data.value // Session data, e.g., expiration, user.email, ...
 <template>
   <div>
     <pre>
-      {{status}}
+      {{ status }}
     </pre>
     <pre>
-      {{data}}
+      {{ data }}
     </pre>
   </div>
 </template>
