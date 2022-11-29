@@ -2,7 +2,7 @@
 import { NuxtAuthHandler } from '#auth'
 import discordProvider from 'next-auth/providers/discord'
 import { PrismaAdapter } from "@next-auth/prisma-adapter"
-import prisma from '../../../lib/prisma'
+import {prisma} from '~~/lib/prisma'
 const config = useRuntimeConfig()
 
 export default NuxtAuthHandler({

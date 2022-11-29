@@ -11,5 +11,9 @@ export default defineNuxtConfig({
   ],
   unocss: {
     uno: true,
+  },
+  typescript: {
+    strict: true,
+    typeCheck: true,
   }
 })
