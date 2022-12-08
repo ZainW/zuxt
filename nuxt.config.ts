@@ -5,6 +5,10 @@ export default defineNuxtConfig({
     discordClientSecret: process.env.DISCORD_CLIENT_SECRET,
     NUXT_SECRET: process.env.NUXT_SECRET,
   },
+  auth: {
+    origin: process.env.ORIGIN,
+    enableGlobalAppMiddleware: false,
+  },
   modules: [
     '@unocss/nuxt',
     '@sidebase/nuxt-auth',
@@ -14,5 +18,6 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
     typeCheck: true,
+    shim: false,
   },
 })

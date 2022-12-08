@@ -1,6 +1,20 @@
-# Nuxt 3 Minimal Starter
+# An opinionated Nuxt 3 starter for side projects
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Zuxt is not meant to be used in an enterprise scenario, uses fun bleeding tech and will break as packages in the ecosystem are in development (mostly auth related). This is a starter I use personally for side projects and to explore cool tech, wip up POCs and try out things that I potentially want ot integrate
+
+
+## Packages
+
+[Nuxt](https://nuxt.com/v3) - The definitive Vue based framework for creating fullstack apps
+
+[tRPC](https://trpc.io/) - Best way to create typesafe end to end apis
+
+[Prisma](https://www.prisma.io/) - Next-gen ORM creating enabling the best DX for type-safety, migrations and auto-completion
+
+[UnoCSS](https://github.com/unocss/unocss) - Tailwind-ish type library, more options more features, icons, fonts etc...
+
+[NuxtAuth](https://github.com/sidebase/nuxt-auth) - Auth based on NexdtAuth implementation
+
 
 ## Setup
 
@@ -16,7 +30,11 @@ npm install
 # pnpm
 pnpm install --shamefully-hoist
 ```
+To create your db and/or automatically migrate your database
 
+```bash
+pnpx prisma db push
+```
 ## Development Server
 
 Start the development server on http://localhost:3000

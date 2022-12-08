@@ -1,8 +1,5 @@
 <script setup lang="ts">
-const { status, data, signIn, signOut } = await useSession({
-  // Whether a session is required. If it is, a redirect to the signin page will happen if no active session exists
-  required: true,
-})
+const { status, data, signIn, signOut } = useSession()
 // status.value // Session status: `unauthenticated`, `loading`, `authenticated`
 // data.value // Session data, e.g., expiration, user.email, ...
 // await signIn() // Sign in the user

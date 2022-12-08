@@ -21,7 +21,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.33.1",
     "@nuxtjs/color-mode": "^3.2.0",
-    "@sidebase/nuxt-auth": "^0.2.0",
+    "@sidebase/nuxt-auth": "^0.3.0-alpha.3",
     "@unocss/nuxt": "^0.47.4",
     "eslint": "^8.28.0",
     "nuxt": "3.0.0",

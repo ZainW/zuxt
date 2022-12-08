@@ -5,7 +5,7 @@ specifiers:
   '@next-auth/prisma-adapter': ^1.0.5
   '@nuxtjs/color-mode': ^3.2.0
   '@prisma/client': ^4.7.0
-  '@sidebase/nuxt-auth': ^0.2.0
+  '@sidebase/nuxt-auth': ^0.3.0-alpha.3
   '@trpc/client': ^10.4.2
   '@trpc/server': ^10.4.2
   '@unocss/nuxt': ^0.47.4
@@ -32,7 +32,7 @@ dependencies:
 devDependencies:
   '@antfu/eslint-config': 0.33.1_hsf322ms6xhhd4b5ne6lb74y4a
   '@nuxtjs/color-mode': 3.2.0
-  '@sidebase/nuxt-auth': 0.2.0
+  '@sidebase/nuxt-auth': 0.3.0-alpha.3
   '@unocss/nuxt': 0.47.4
   eslint: 8.28.0
   nuxt: 3.0.0_hsf322ms6xhhd4b5ne6lb74y4a
@@ -929,12 +929,13 @@ packages:
       picomatch: 2.3.1
       rollup: 2.79.1
 
-  /@sidebase/nuxt-auth/0.2.0:
-    resolution: {integrity: sha512-6t7XSGBrpH6k2lWy5kWfXfS6L5jgWWolDzLD9g7Y5G2sbMAjigyCRunaRTKZ2XFiGW3TJODlPaxV3OcPX54HsQ==}
+  /@sidebase/nuxt-auth/0.3.0-alpha.3:
+    resolution: {integrity: sha512-1EXzNJz+e5lh4AcQOJ+4jKjFFMAgl7S5vDclMrH2mBR5NbHMBW4/Z0M88cyXtfwZq/QY/7kbiRVpUfpDndp+lg==}
     dependencies:
       '@nuxt/kit': 3.0.0
       defu: 6.1.1
       next-auth: 4.17.0
+      requrl: 3.0.2
       ufo: 1.0.1
     transitivePeerDependencies:
       - next
@@ -5167,6 +5168,10 @@ packages:
 
   /requires-port/1.0.0:
     resolution: {integrity: sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==}
+
+  /requrl/3.0.2:
+    resolution: {integrity: sha512-f3gjR6d8MhOpn46PP+DSJywbmxi95fxQm3coXBFwognjFLla9X6tr8BdNyaIKNOEkaRbRcm0/zYAqN19N1oyhg==}
+    dev: true
 
   /resolve-from/4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
