@@ -8,10 +8,9 @@ export default defineNuxtConfig({
   modules: [
     '@unocss/nuxt',
     '@sidebase/nuxt-auth',
+    '@vueuse/nuxt',
+    '@nuxtjs/color-mode',
   ],
-  unocss: {
-    uno: true,
-  },
   typescript: {
     strict: true,
     typeCheck: true,

@@ -13,14 +13,16 @@
     "@prisma/client": "^4.7.0",
     "@trpc/client": "^10.4.2",
     "@trpc/server": "^10.4.2",
+    "@vueuse/nuxt": "^9.6.0",
     "superjson": "^1.11.0",
     "trpc-nuxt": "^0.4.3",
     "zod": "^3.19.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.32.0",
+    "@antfu/eslint-config": "^0.33.1",
+    "@nuxtjs/color-mode": "^3.2.0",
     "@sidebase/nuxt-auth": "^0.2.0",
-    "@unocss/nuxt": "^0.47.1",
+    "@unocss/nuxt": "^0.47.4",
     "eslint": "^8.28.0",
     "nuxt": "3.0.0",
     "prisma": "^4.7.0",
