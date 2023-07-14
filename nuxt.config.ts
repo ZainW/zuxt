@@ -1,23 +1,21 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  devtools: { enabled: true },
+
   runtimeConfig: {
-    discordClientId: process.env.DISCORD_CLIENT_ID,
-    discordClientSecret: process.env.DISCORD_CLIENT_SECRET,
-    NUXT_SECRET: process.env.NUXT_SECRET,
+    DATABASE_URL: process.env.DATABASE_URL,
+    GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
+    GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
+    GOOGLE_REDIRECT_URI: process.env.GOOGLE_REDIRECT_URI,
   },
-  auth: {
-    origin: process.env.ORIGIN,
-    enableGlobalAppMiddleware: false,
+  modules: ['@nuxthq/ui'],
+  ui: {
+    icons: 'all',
+    safelistColors: ['primary', 'green', 'red'],
   },
-  modules: [
-    '@unocss/nuxt',
-    '@sidebase/nuxt-auth',
-    '@vueuse/nuxt',
-    '@nuxtjs/color-mode',
-  ],
   typescript: {
     strict: true,
-    typeCheck: true,
+    typeCheck: false,
     shim: false,
   },
 })
