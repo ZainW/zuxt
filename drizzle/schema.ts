@@ -1,44 +1,62 @@
-import { bigint, index, mysqlEnum, mysqlTable, text, tinyint, uniqueIndex, varchar } from 'drizzle-orm/mysql-core'
+import { relations } from 'drizzle-orm'
+import { bigint, mysqlTable, varchar } from 'drizzle-orm/mysql-core'
 
-
-export const authKey = mysqlTable('auth_key', {
-  id: varchar('id', { length: 191 }).primaryKey().notNull(),
-  hashedPassword: varchar('hashed_password', { length: 191 }),
-  userId: varchar('user_id', { length: 191 }).notNull(),
-  primaryKey: tinyint('primary_key').notNull(),
-  expires: bigint('expires', { mode: 'number' }),
-},
-(table) => {
-  return {
-    idKey: uniqueIndex('auth_key_id_key').on(table.id),
-    userIdIdx: index('auth_key_user_id_idx').on(table.userId),
-  }
+export const users = mysqlTable('auth_user', {
+  id: varchar('id', {
+    length: 15, // change this when using custom user ids
+  }).primaryKey(),
+  // other user attributes
 })
 
-export const authSession = mysqlTable('auth_session', {
-  id: varchar('id', { length: 191 }).primaryKey().notNull(),
-  userId: varchar('user_id', { length: 191 }).notNull(),
-  activeExpires: bigint('active_expires', { mode: 'number' }).notNull(),
-  idleExpires: bigint('idle_expires', { mode: 'number' }).notNull(),
-},
-(table) => {
-  return {
-    idKey: uniqueIndex('auth_session_id_key').on(table.id),
-    userIdIdx: index('auth_session_user_id_idx').on(table.userId),
-  }
+export const keys = mysqlTable('user_key', {
+  id: varchar('id', {
+    length: 255,
+  }).primaryKey(),
+  userId: varchar('user_id', {
+    length: 15,
+  })
+    .notNull()
+    .references(() => users.id),
+  hashedPassword: varchar('hashed_password', {
+    length: 255,
+  }),
 })
 
-export const authUser = mysqlTable('auth_user', {
-  id: varchar('id', { length: 191 }).primaryKey().notNull(),
-  avatar: text('avatar'),
-  email: varchar('email', { length: 191 }).notNull(),
-  name: varchar('name', { length: 191 }),
-  role: mysqlEnum('role', ['ADMIN', 'USER']).default('USER').notNull(),
-},
-(table) => {
-  return {
-    emailKey: uniqueIndex('auth_user_email_key').on(table.email),
-    idKey: uniqueIndex('auth_user_id_key').on(table.id),
-  }
+export const sessions = mysqlTable('user_session', {
+  id: varchar('id', {
+    length: 128,
+  }).primaryKey(),
+  userId: varchar('user_id', {
+    length: 15,
+  })
+    .notNull()
+    .references(() => users.id),
+  activeExpires: bigint('active_expires', {
+    mode: 'number',
+  }).notNull(),
+  idleExpires: bigint('idle_expires', {
+    mode: 'number',
+  }).notNull(),
 })
 
+export const userKeyRelations = relations(users, ({ many }) => ({
+  keys: many(keys),
+}))
+
+export const userSessionRelations = relations(users, ({ many }) => ({
+  sessions: many(sessions),
+}))
+
+export const keyUserRelations = relations(keys, ({ one }) => ({
+  user: one(users, {
+    fields: [keys.userId],
+    references: [users.id],
+  }),
+}))
+
+export const sessionUserRelations = relations(sessions, ({ one }) => ({
+  user: one(users, {
+    fields: [sessions.userId],
+    references: [users.id],
+  }),
+}))
