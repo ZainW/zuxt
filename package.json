@@ -10,16 +10,16 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxthq/ui": "^2.5.0",
-    "@types/node": "^20.4.2",
-    "nuxt": "^3.6.2"
+    "@nuxt/ui": "^2.8.0",
+    "@types/node": "^20.6.0",
+    "nuxt": "^3.7.2"
   },
   "dependencies": {
-    "@lucia-auth/adapter-mysql": "^1.1.1",
-    "@lucia-auth/oauth": "^1.2.1",
-    "@planetscale/database": "^1.8.0",
-    "drizzle-kit": "^0.19.5",
+    "@lucia-auth/adapter-mysql": "^2.0.0",
+    "@lucia-auth/oauth": "^3.1.0",
+    "@planetscale/database": "^1.11.0",
+    "drizzle-kit": "^0.19.13",
     "drizzle-orm": "^0.27.2",
-    "lucia-auth": "^1.8.0"
+    "lucia": "^2.5.0"
   }
 }

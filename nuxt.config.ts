@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
     GOOGLE_REDIRECT_URI: process.env.GOOGLE_REDIRECT_URI,
   },
-  modules: ['@nuxthq/ui'],
+  modules: ['@nuxt/ui'],
   ui: {
     icons: 'all',
     safelistColors: ['primary', 'green', 'red'],
