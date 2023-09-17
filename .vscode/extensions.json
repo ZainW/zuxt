@@ -1,5 +1,7 @@
 {
   "recommendations": [
-    "antfu.unocss"
+    "dbaeumer.vscode-eslint",
+    "Vue.volar",
+    "tailwindcss.tailwindcss",
   ]
 }
