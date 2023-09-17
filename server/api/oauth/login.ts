@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
     maxAge: 60 * 60,
     httpOnly: process.env.NODE_ENV === 'production',
     secure: process.env.NODE_ENV === 'production',
-    domain: process.env.NODE_ENV === 'production' ? 'recipes.wania.app' : undefined,
+    domain: process.env.NODE_ENV === 'production' ? 'your.production.com' : undefined,
   })
   return await sendRedirect(event, url.toString(), 302)
 })

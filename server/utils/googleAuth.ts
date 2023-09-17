@@ -1,5 +1,5 @@
 import { google } from '@lucia-auth/oauth/providers'
-import { auth } from './auth'
+import { auth } from './lucia'
 
 const config = useRuntimeConfig()
 

@@ -1,11 +1,8 @@
-import { drizzle } from 'drizzle-orm/planetscale-serverless'
-import { connect } from '@planetscale/database'
+import { drizzle } from 'drizzle-orm/libsql'
+import { createClient } from '@libsql/client'
 
-const config = useRuntimeConfig()
-
-// create the connection
-const connection = connect({
-  url: config.DATABASE_URL,
+const sqlclient = createClient({
+  url: 'file:drizzle/main.db',
 })
 
-export const db = drizzle(connection)
+export const db = drizzle(sqlclient)

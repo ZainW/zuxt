@@ -1,17 +1,20 @@
 import { lucia } from 'lucia'
 import { h3 } from 'lucia/middleware'
-import { connect } from '@planetscale/database'
-import { planetscale } from '@lucia-auth/adapter-mysql'
 
-const process = require('node:process')
+import { drizzle } from 'drizzle-orm/libsql'
+import { libsql } from '@lucia-auth/adapter-sqlite'
+import { createClient } from '@libsql/client'
 
-const config = useRuntimeConfig()
-const connection = connect({
-  url: config.DATABASE_URL,
+const sqlclient = createClient({
+  url: 'file:drizzle/main.db',
 })
 
+export const db = drizzle(sqlclient)
+
+// const config = useRuntimeConfig()
+
 export const auth = lucia({
-  adapter: planetscale(connection, {
+  adapter: libsql(sqlclient, {
     user: 'auth_user',
     key: 'user_key',
     session: 'user_session',
@@ -22,7 +25,6 @@ export const auth = lucia({
     attributes: {
       sameSite: 'lax',
       path: '/',
-      // TODO: input your domain here for production
       domain: process.env.NODE_ENV === 'production' ? '' : 'localhost',
     },
   },

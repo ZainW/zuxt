@@ -10,19 +10,21 @@
     "lint": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.41.3",
+    "@antfu/eslint-config": "^0.42.0",
     "@nuxt/devtools": "latest",
-    "@nuxt/ui": "^2.8.0",
-    "@types/node": "^20.6.0",
+    "@nuxt/ui": "^2.8.1",
+    "@types/node": "^20.6.2",
     "eslint": "^8.49.0",
-    "nuxt": "^3.7.2"
+    "nuxt": "^3.7.3"
   },
   "dependencies": {
+    "@libsql/client": "^0.3.4",
     "@lucia-auth/adapter-mysql": "^2.0.0",
-    "@lucia-auth/oauth": "^3.1.0",
+    "@lucia-auth/adapter-sqlite": "^2.0.0",
+    "@lucia-auth/oauth": "^3.2.0",
     "@planetscale/database": "^1.11.0",
     "drizzle-kit": "^0.19.13",
-    "drizzle-orm": "^0.27.2",
-    "lucia": "^2.5.0"
+    "drizzle-orm": "^0.28.6",
+    "lucia": "^2.6.0"
   }
 }
